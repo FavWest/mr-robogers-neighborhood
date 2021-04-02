@@ -96,4 +96,4 @@ Expected Output: "Won't you be my neighbor?"
 
 Test: "If passed a non-number for the first argument, beepBoop should return non-number message."
 Code: beepBoop("hi");
-Expected Output: "hi \n Divide by cucumber error. Please reinstall universe and reboot."
+Expected Output: "hi... ... ... Divide by cucumber error. Please reinstall universe and reboot."

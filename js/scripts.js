@@ -8,7 +8,7 @@ function beepBoop(number, name) {
     }
   }
   if(!Number(number)){
-    return number + "\n Divide by cucumber error. Please reinstall universe and reboot.";
+    return number + "... ... ... Divide by cucumber error. Please reinstall universe and reboot.";
   }
   for(i=0; i<=number; i++){
     if(i.toString().includes("3")) {
@@ -49,14 +49,14 @@ displayResults(beepBoop(25)[19], "Beep!");
 displayResults(beepBoop(125)[123]+beepBoop(110)[105]+beepBoop(215)[210], "Won't you be my neighbor?Beep!Boop")
 displayResults(beepBoop(4, "Sam")[3], "Won't you be my neighbor, Sam?");
 displayResults(beepBoop(4, "")[3], "Won't you be my neighbor?");
-displayResults(beepBoop("hi"), "hi \n Divide by cucumber error. Please reinstall universe and reboot.");
+displayResults(beepBoop("hi"), "hi... ... ... Divide by cucumber error. Please reinstall universe and reboot.");
 
 //UI Logic
 $(document).ready(function() {
   $("#talk").click(function(event) {
     event.preventDefault();
     $("#robo-response-box").show();
-    const responseArray=beepBoop($("#number").val());
+    const responseArray=beepBoop($("#number").val(), $("#name").val());
     let response = responseArray;
     if (Array.isArray(responseArray)){
       response= convertToFormattedString(responseArray);
@@ -66,7 +66,7 @@ $(document).ready(function() {
   $("#reverse").click(function(event){
     event.preventDefault();
     $("#robo-response-box").show();
-    let responseArray=beepBoop($("#number").val());
+    let responseArray=beepBoop($("#number").val(), $("#name").val());
     let response = responseArray;
     if (Array.isArray(responseArray)){
       responseArray.reverse();
