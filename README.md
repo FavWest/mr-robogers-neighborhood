@@ -29,7 +29,7 @@ _User enters a number. A response appears that counts up to that number, followi
 * Open Portfolio folder in Explorer or Finder
 * Double-click "index.html" to open in a browser
 ## Known Bugs
-* UI: Robot response can overflow border box on smaller screens.
+* None
 ## License
 BY-SA
 Copyright (c) 2021 Victoria West
@@ -82,18 +82,25 @@ Test: "When special rules conflict, precedence should go to 3, then 2, then 1."
 Code: beepBoop(125)[123]+beepBoop(110)[105]+beepBoop(215)[210];  
 Expected Output: "Won't you be my neighbor?Beep!Boop"  
 
-Test: "If passed a second argument of length one or more, add it to the end of 'Won't you be my neighbor?'"
-Code: beepBoop(4, "Sam")[3];
-Expected Output: "Won't you be my neighbor, Sam?"
+Test: "If passed a second argument of length one or more, add it to the end of 'Won't you be my neighbor?'"  
+Code: beepBoop(4, "Sam")[3];  
+Expected Output: "Won't you be my neighbor, Sam?"  
 
-Test: "If passed a second argument '', do not add it to the end of 'Won't you be my neighbor?'"
-Code: beepBoop(4, "")[3];
-Expected Output: "Won't you be my neighbor?"
+Test: "If passed a second argument '', do not add it to the end of 'Won't you be my neighbor?'"  
+Code: beepBoop(4, "")[3];  
+Expected Output: "Won't you be my neighbor?"  
 
-Test: "If passed a second argument that is only whitespace, do not add it to the end of 'Won't you be my neighbor?'"
-Code: beepBoop(4, "     ")[3];
-Expected Output: "Won't you be my neighbor?"
+Test: "If passed a second argument that is only whitespace, do not add it to the end of 'Won't you be my neighbor?'"  
+Code: beepBoop(4, "     ")[3];  
+Expected Output: "Won't you be my neighbor?"  
 
-Test: "If passed a non-number for the first argument, beepBoop should return non-number message."
-Code: beepBoop("hi");
-Expected Output: "hi... ... ... Divide by cucumber error. Please reinstall universe and reboot."
+Test: "If passed a non-number for the first argument, beepBoop should return non-number message."  
+Code: beepBoop("hi");  
+Expected Output: "hi... ... ... Divide by cucumber error. Please reinstall universe and reboot."  
+
+#### Describe: addStylingToHTML()
+Test: "Given the string "Won't you be my neighbor?", add <em> brackets around it."
+Code: addStylingToHTML("Won't you be my neighbor?");
+Expected Output: ("<em>Won't you be my neighbor?</em>")
+
+

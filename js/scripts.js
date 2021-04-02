@@ -12,7 +12,7 @@ function beepBoop(number, name) {
   }
   for(i=0; i<=number; i++){
     if(i===42){
-      result.push("the ultimate answer to life, the universe and everything");
+      result.push("--the ultimate answer to life, the universe and everything--");
     } else if(i.toString().includes("3")) {
       result.push(message);
     } else if (i.toString().includes("2")) {
@@ -28,6 +28,10 @@ function beepBoop(number, name) {
 
 function convertToFormattedString(array){
   return '"'+array.join(" ")+'"';
+}
+//add <em> tags around "Won't you be my neighbor?"
+function addStylingToHTML(HTMLstring){
+  return "<em>" + HTMLstring + "</em>";
 }
 //TESTS
 function displayResults(input, result){
@@ -53,6 +57,8 @@ displayResults(beepBoop(4, "Sam")[3], "Won't you be my neighbor, Sam?");
 displayResults(beepBoop(4, "")[3], "Won't you be my neighbor?");
 displayResults(beepBoop("hi"), "hi... ... ... Divide by cucumber error. Please reinstall universe and reboot.");
 
+displayResults(addStylingToHTML("Won't you be my neighbor?"), "<em>Won't you be my neighbor?</em>");
+
 //UI Logic
 $(document).ready(function() {
   $("#talk").click(function(event) {
@@ -63,7 +69,8 @@ $(document).ready(function() {
     if (Array.isArray(responseArray)){
       response= convertToFormattedString(responseArray);
     }
-    $("#robo-response-text").text(response);
+    response=addStylingToHTML(response);
+    $("#robo-response-text").html(response);
   });
   $("#reverse").click(function(event){
     event.preventDefault();
@@ -74,6 +81,7 @@ $(document).ready(function() {
       responseArray.reverse();
       response= convertToFormattedString(responseArray);
     }
-    $("#robo-response-text").text(response);
+    response=addStylingToHTML(response);
+    $("#robo-response-text").html(response);
   })
 });
