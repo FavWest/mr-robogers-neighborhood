@@ -26,9 +26,13 @@ img {
 }
 
 #mr-roboger-says {
-  font-size: larger;
+  font-size: x-large;
   border: 1px solid rgba(0, 0, 0, 0.74);
   background-image: linear-gradient(to right, black, white, black, white,
    black, white, black);
   color:cyan;
+}
+
+#robo-response-text {
+  font-size: larger;
 }

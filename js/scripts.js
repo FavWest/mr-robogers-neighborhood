@@ -15,12 +15,25 @@ function beepBoop(number) {
   return result;
 }
 
+function convertToFormattedString(array){
+  return '"'+array.join(" ")+'"';
+}
+
 //UI Logic
 $(document).ready(function() {
-  $("#number-form").submit(function(event) {
+  $("#talk").click(function(event) {
     event.preventDefault();
     $("#robo-response-box").show();
-    const response=beepBoop($("#number").val());
+    const responseArray=beepBoop($("#number").val());
+    const response= convertToFormattedString(responseArray);
     $("#robo-response-text").text(response);
   });
+  $("#reverse").click(function(event){
+    event.preventDefault();
+    $("#robo-response-box").show();
+    let responseArray=beepBoop($("#number").val());
+    responseArray.reverse();
+    const response= convertToFormattedString(responseArray);
+    $("#robo-response-text").text(response);
+  })
 });
