@@ -19,7 +19,8 @@ function beepBoop(number) {
 $(document).ready(function() {
   $("#number-form").submit(function(event) {
     event.preventDefault();
+    $("#robo-response-box").show();
     const response=beepBoop($("#number").val());
-    $("#robo-response").text(response);
-  })
-})
+    $("#robo-response-text").text(response);
+  });
+});

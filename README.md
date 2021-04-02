@@ -29,10 +29,12 @@ _User enters a number. A response appears that counts up to that number, followi
 * Open Portfolio folder in Explorer or Finder
 * Double-click "index.html" to open in a browser
 ## Known Bugs
-* 
+* UI: Robot response can overflow border box on smaller screens.
 ## License
-MIT
+BY-SA
 Copyright (c) 2021 Victoria West
+
+Robot Photo by Rico Shen
 ## Contact Information
 Victoria West email@email.com
 

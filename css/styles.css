@@ -1,0 +1,34 @@
+.centered {
+  text-align: center;
+}
+
+.jumbotron {
+  background-image: linear-gradient(to right, rgba(255, 192, 229, 0.5), rgba(255, 255, 0, 0.5),
+  rgba(255, 192, 229, 0.5));
+}
+
+img {
+  float: right;
+  width: 50%;
+}
+
+#robo-response-box {
+  display: none;
+  border: 2px solid black;
+  margin: 5%;
+  padding: 2%;
+  width: 40%;
+}
+
+.button {
+  border-radius: 25px;
+  background-image: linear-gradient(to right, cyan, white, cyan, white, cyan, white, cyan);
+}
+
+#mr-roboger-says {
+  font-size: larger;
+  border: 1px solid rgba(0, 0, 0, 0.74);
+  background-image: linear-gradient(to right, black, white, black, white,
+   black, white, black);
+  color:cyan;
+}
