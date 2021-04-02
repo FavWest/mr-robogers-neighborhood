@@ -7,7 +7,7 @@ function beepBoop(number, name) {
     message = "Won't you be my neighbor, " + name + "?";
     }
   }
-  if(!Number(number)){
+  if(!Number(number) && number != 0){
     return number + "... ... ... Divide by cucumber error. Please reinstall universe and reboot.";
   }
   for(i=0; i<=number; i++){
