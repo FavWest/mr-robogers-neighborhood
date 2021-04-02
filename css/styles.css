@@ -21,8 +21,15 @@ img {
 }
 
 .button {
+  border: 1px solid rgb(44, 44, 44);
   border-radius: 25px;
   background-image: linear-gradient(to right, cyan, white, cyan, white, cyan, white, cyan);
+}
+
+.button:hover {
+  border: 2px solid aqua;
+  background-image: linear-gradient(to right, white, cyan, white, cyan, white, cyan, white);
+  cursor: pointer;  
 }
 
 #mr-roboger-says {
@@ -35,4 +42,8 @@ img {
 
 #robo-response-text {
   font-size: larger;
+}
+
+#number-div {
+  padding: 1%;
 }
