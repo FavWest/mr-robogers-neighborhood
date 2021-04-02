@@ -3,7 +3,7 @@ function beepBoop(number) {
   for(i=0; i<=number; i++){
     if(i.toString().includes("3")) {
       result.push("Won't you be my neighbor?");
-    } else if (i===2) {
+    } else if (i.toString().includes("2")) {
       result.push("Boop");
     } else if (i===1) {
       result.push("Beep!");
@@ -31,4 +31,6 @@ console.log(beepBoop(4)[2]);
 console.log("Boop");
 displayResults(beepBoop(4)[1], "Beep!");
 displayResults(beepBoop(25)[23], "Won't you be my neighbor?");
-
+displayResults(beepBoop(25)[25], "Boop");
+displayResults(beepBoop(25)[19], "Beep!");
+displayResults(beepBoop(125)[123]+beepBoop(110)[105]+beepBoop(215)[210], "Won't you be my neighbor? Beep! Boop")

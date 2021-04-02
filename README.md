@@ -38,7 +38,5 @@ Code: beepBoop(25)[19];
 Expected Output: "Beep"
 
 Test: "When special rules conflict, precedence should go to 3, then 2, then 1."
-Code: let result=beepBoop(250);
-let string = result[123]+result[105]+result[210];
-return string;
-Expected Output: "Won't you be my neighbor? Beep! Boop"
+Code: beepBoop(125)[123]+beepBoop(110)[105]+beepBoop(215)[210];
+Expected Output: "Won't you be my neighbor?Beep!Boop"
