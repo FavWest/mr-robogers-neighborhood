@@ -107,4 +107,7 @@ Test: "Given a matching string inside a larger string, add \<em> brackets around
 Code: addStylingToHTML("Beep! Won't you be my neighbor? Boop");  
 Expected Output: "Beep! \<em>Won't you be my neighbor?\<em> Boop"  
 
+Test: "Given multiple matching strings inside a larger string, add \<em> brackets each case of "Won't you be my neighbor?""  
+Code: addStylingToHTML("Beep! Won't you be my neighbor? Boop Won't you be my neighbor? Beep!");  
+Expected Output: "Beep! \<em>Won't you be my neighbor?\<em> Boop \<em>Won't you be my neighbor?\</em> Beep!"  
 

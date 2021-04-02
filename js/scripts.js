@@ -31,7 +31,7 @@ function convertToFormattedString(array){
 }
 //add <em> tags around "Won't you be my neighbor?"
 function addStylingToHTML(HTMLstring){
-  let stringWithEmphasis = HTMLstring.replace("Won't you be my neighbor?", "<em>Won't you be my neighbor?</em>")
+  let stringWithEmphasis = HTMLstring.replace(/Won't you be my neighbor\?/g, "<em>Won't you be my neighbor?</em>")
   return stringWithEmphasis;
 }
 //TESTS
@@ -41,7 +41,7 @@ function displayResults(input, result){
 }
 
 displayResults(addStylingToHTML("Won't you be my neighbor?"), "<em>Won't you be my neighbor?</em>");
-displayResults(addStylingToHTML("Beep! Won't you be my neighbor? Boop"), "Beep! <em>Won't you be my neighbor?</em> Boop")
+displayResults(addStylingToHTML("Beep! Won't you be my neighbor? Boop Won't you be my neighbor? Boop"), "Beep! <em>Won't you be my neighbor?</em> Boop <em>Won't you be my neighbor?</em> Boop");
 
 //UI Logic
 $(document).ready(function() {
