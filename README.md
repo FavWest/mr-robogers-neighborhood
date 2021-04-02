@@ -99,8 +99,12 @@ Code: beepBoop("hi");
 Expected Output: "hi... ... ... Divide by cucumber error. Please reinstall universe and reboot."  
 
 #### Describe: addStylingToHTML()
-Test: "Given the string "Won't you be my neighbor?", add <em> brackets around it."
-Code: addStylingToHTML("Won't you be my neighbor?");
-Expected Output: ("<em>Won't you be my neighbor?</em>")
+Test: "Given the string "Won't you be my neighbor?", add \<em> brackets around it."  
+Code: addStylingToHTML("Won't you be my neighbor?");  
+Expected Output: "\<em>Won't you be my neighbor?\</em>"  
+
+Test: "Given a matching string inside a larger string, add \<em> brackets around "Won't you be my neighbor?" only.  
+Code: addStylingToHTML("Beep! Won't you be my neighbor? Boop");  
+Expected Output: "Beep! \<em>Won't you be my neighbor?\<em> Boop"  
 
 
