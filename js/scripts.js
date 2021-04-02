@@ -3,6 +3,8 @@ function beepBoop(number) {
   for(i=0; i<=number; i++){
     if(i===3) {
       result.push("Won't you be my neighbor?");
+    } else if (i===2) {
+      result.push("Boop");
     } else {
       result.push(i);
     }    
@@ -17,4 +19,8 @@ console.log(beepBoop(15).length);
 console.log(16);
 console.log(beepBoop(50)[45]);
 console.log(45);
+console.log(beepBoop(4)[3]);
+console.log("Won't you be my neighbor?");
+console.log(beepBoop(4)[2]);
+console.log("Boop");
 
