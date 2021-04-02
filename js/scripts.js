@@ -33,4 +33,4 @@ displayResults(beepBoop(4)[1], "Beep!");
 displayResults(beepBoop(25)[23], "Won't you be my neighbor?");
 displayResults(beepBoop(25)[25], "Boop");
 displayResults(beepBoop(25)[19], "Beep!");
-displayResults(beepBoop(125)[123]+beepBoop(110)[105]+beepBoop(215)[210], "Won't you be my neighbor? Beep! Boop")
+displayResults(beepBoop(125)[123]+beepBoop(110)[105]+beepBoop(215)[210], "Won't you be my neighbor?Beep!Boop")
