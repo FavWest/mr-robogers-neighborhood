@@ -11,7 +11,9 @@ function beepBoop(number, name) {
     return number + "... ... ... Divide by cucumber error. Please reinstall universe and reboot.";
   }
   for(i=0; i<=number; i++){
-    if(i.toString().includes("3")) {
+    if(i===42){
+      result.push("the ultimate answer to life, the universe and everything");
+    } else if(i.toString().includes("3")) {
       result.push(message);
     } else if (i.toString().includes("2")) {
       result.push("Boop");
