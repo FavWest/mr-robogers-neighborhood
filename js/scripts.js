@@ -5,7 +5,7 @@ function beepBoop(number) {
       result.push("Won't you be my neighbor?");
     } else if (i.toString().includes("2")) {
       result.push("Boop");
-    } else if (i===1) {
+    } else if (i.toString().includes("1")) {
       result.push("Beep!");
     } else {
       result.push(i);
