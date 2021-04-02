@@ -1,11 +1,15 @@
 function beepBoop(number) {
   let result=[];
   for(i=0; i<=number; i++){
-    result.push(i);
+    if(i===3) {
+      result.push("Won't you be my neighbor?");
+    } else {
+      result.push(i);
+    }    
   }
   return result;
 }
 
 //TESTS
-console.log(beepBoop(15));
+console.log(beepBoop(5));
 

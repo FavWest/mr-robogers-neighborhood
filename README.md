@@ -10,3 +10,6 @@ Test: "It should return an array that counts up from 0 to inputted number"
 Code: beepBoop(15);
 Expected Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
+Test: "The number '3' should be replaced with 'Won't you be my neighbor?'"
+Code: beepBoop(4);
+Expected Output: [0, 1, 2, "Won't you be my neighbor?", 4]
