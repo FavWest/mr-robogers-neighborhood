@@ -93,3 +93,7 @@ Expected Output: "Won't you be my neighbor?"
 Test: "If passed a second argument that is only whitespace, do not add it to the end of 'Won't you be my neighbor?'"
 Code: beepBoop(4, "     ")[3];
 Expected Output: "Won't you be my neighbor?"
+
+Test: "If passed a non-number for the first argument, beepBoop should return non-number message."
+Code: beepBoop("hi");
+Expected Output: "hi \n Divide by cucumber error. Please reinstall universe and reboot."
