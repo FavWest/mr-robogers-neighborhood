@@ -89,3 +89,7 @@ Expected Output: "Won't you be my neighbor, Sam?"
 Test: "If passed a second argument '', do not add it to the end of 'Won't you be my neighbor?'"
 Code: beepBoop(4, "")[3];
 Expected Output: "Won't you be my neighbor?"
+
+Test: "If passed a second argument that is only whitespace, do not add it to the end of 'Won't you be my neighbor?'"
+Code: beepBoop(4, "     ")[3];
+Expected Output: "Won't you be my neighbor?"
