@@ -57,15 +57,21 @@ $(document).ready(function() {
     event.preventDefault();
     $("#robo-response-box").show();
     const responseArray=beepBoop($("#number").val());
-    const response= convertToFormattedString(responseArray);
+    let response = responseArray;
+    if (Array.isArray(responseArray)){
+      response= convertToFormattedString(responseArray);
+    }
     $("#robo-response-text").text(response);
   });
   $("#reverse").click(function(event){
     event.preventDefault();
     $("#robo-response-box").show();
     let responseArray=beepBoop($("#number").val());
-    responseArray.reverse();
-    const response= convertToFormattedString(responseArray);
+    let response = responseArray;
+    if (Array.isArray(responseArray)){
+      responseArray.reverse();
+      response= convertToFormattedString(responseArray);
+    }
     $("#robo-response-text").text(response);
   })
 });
