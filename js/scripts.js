@@ -1,9 +1,15 @@
 //Business Logic
-function beepBoop(number) {
+function beepBoop(number, name) {
   let result=[];
+  let message="Won't you be my neighbor?"
+  if(arguments.length>1) {
+    if (name.length!=="") {
+    message = "Won't you be my neighbor, " + name + "?";
+    }
+  }
   for(i=0; i<=number; i++){
     if(i.toString().includes("3")) {
-      result.push("Won't you be my neighbor?");
+      result.push(message);
     } else if (i.toString().includes("2")) {
       result.push("Boop");
     } else if (i.toString().includes("1")) {
@@ -18,6 +24,13 @@ function beepBoop(number) {
 function convertToFormattedString(array){
   return '"'+array.join(" ")+'"';
 }
+
+function displayResults(input, result){
+  console.log(input);
+  console.log(result);
+}
+
+displayResults(beepBoop(4, "Sam")[3], "string");
 
 //UI Logic
 $(document).ready(function() {

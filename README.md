@@ -81,3 +81,11 @@ Expected Output: "Beep"
 Test: "When special rules conflict, precedence should go to 3, then 2, then 1."  
 Code: beepBoop(125)[123]+beepBoop(110)[105]+beepBoop(215)[210];  
 Expected Output: "Won't you be my neighbor?Beep!Boop"  
+
+Test: "If passed a second argument of length one or more, add it to the end of 'Won't you be my neighbor?'"
+Code: beepBoop(4, "Sam")[3];
+Expected Output: "Won't you be my neighbor, Sam?"
+
+Test: "If passed a second argument '', do not add it to the end of 'Won't you be my neighbor?'"
+Code: beepBoop(4, "")[3];
+Expected Output: "Won't you be my neighbor?"
