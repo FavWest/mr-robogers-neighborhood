@@ -3,7 +3,7 @@ function beepBoop(number, name) {
   let result=[];
   let message="Won't you be my neighbor?"
   if(arguments.length>1) {
-    if (name.length!=="") {
+    if (name.length!==0) {
     message = "Won't you be my neighbor, " + name + "?";
     }
   }
@@ -24,13 +24,6 @@ function beepBoop(number, name) {
 function convertToFormattedString(array){
   return '"'+array.join(" ")+'"';
 }
-
-function displayResults(input, result){
-  console.log(input);
-  console.log(result);
-}
-
-displayResults(beepBoop(4, "Sam")[3], "string");
 
 //UI Logic
 $(document).ready(function() {
