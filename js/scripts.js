@@ -31,17 +31,12 @@ function convertToFormattedString(array){
 }
 //add <em> tags around "Won't you be my neighbor?"
 function addStylingToHTML(HTMLstring){
-  let stringWithEmphasis = HTMLstring.replace(/Won't you be my neighbor\?/g, "<em>Won't you be my neighbor?</em>")
+  let phrase = HTMLstring.match(/Won't you be my neighbor.*?\?/);
+  let stringWithEmphasis = HTMLstring.replace(/Won't you be my neighbor.*?\?/g, "<em>"+phrase+"</em>")
   return stringWithEmphasis;
 }
-//TESTS
-function displayResults(input, result){
-  console.log(input);
-  console.log(result);
-}
 
-displayResults(addStylingToHTML("Won't you be my neighbor?"), "<em>Won't you be my neighbor?</em>");
-displayResults(addStylingToHTML("Beep! Won't you be my neighbor? Boop Won't you be my neighbor? Boop"), "Beep! <em>Won't you be my neighbor?</em> Boop <em>Won't you be my neighbor?</em> Boop");
+console.log(addStylingToHTML("Beep! Won't you be my neighbor, Sam? Boop Won't you be my neighbor, a a a b 15 d? Beep!"));
 
 //UI Logic
 $(document).ready(function() {
@@ -67,5 +62,5 @@ $(document).ready(function() {
     }
     response=addStylingToHTML(response);
     $("#robo-response-text").html(response);
-  })
+  });
 });
